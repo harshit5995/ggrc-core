@@ -9,9 +9,9 @@ Risk Management is a process to identify business and technical risks as well as
 
 Compliance refers to processes necessary to meet applicable regulations and communicate to stakeholders about it.
 
-Many organizations operate in multiple jurisdictions worldwide, each of which has its own and often overlapping laws and regulations.   Organizational functions and information relating to risk management and compliance often tend to be managed in silos reflecting the multiple jurisdictions, scope, stakeholder diversity and historical basis.   This leads to inefficiency.
+Many organizations operate in multiple jurisdictions worldwide, each of which has its own and often overlapping laws and regulations.   Organizational functions and information relating to risk management and compliance often tend to be managed in silos reflecting the multiple jurisdictions, scope, stakeholder diversity, and historical basis.   This leads to inefficiency.
 
-The GGRC project intends to provide an open source solution for managing some of these common problems.  The application provides a common system of record for information in this domain.   It provides the ability to capture the relationships and to understand how the pieces fit together.  It also provides workflow capability to manage processes in this domain.
+The GGRC project intends to provide an open-source solution for managing some of these common problems.  The application provides a common system of record for information in this domain.   It provides the ability to capture the relationships and to understand how the pieces fit together.  It also provides workflow capability to manage processes in this domain.
 
 
 Migrated from [Google](https://code.google.com/archive/p/compliance-management)
@@ -46,7 +46,7 @@ have Docker up and running. Here are the steps:
 
 ``` sh
 mv docker-compose.override.yml{.example,}
-vim docker-compose.override.yml # Add the keys from cloud console
+vim docker-compose.override.yml # Add the keys from the cloud console
 ```
 * Run the following:
 
@@ -100,7 +100,7 @@ deploy_appengine extras/deploy_settings_local.sh
 To (re-)generate the requirements, you can run:
 
 ```
-make clean_appengine && make appengine
+make clean_appengine && make AppEngine
 ```
 
 ### Accessing the Application
@@ -113,7 +113,7 @@ user@example.com with admin rights and setup other users later.
 
 ### Accessing MySQL query logs
 
-If using the `docker-compose.yml` file, the mysql query logs are enabled
+If using the `docker-compose.yml` file, the MySQL query logs are enabled
 by default and can be monitored with:
 
 ```
@@ -140,7 +140,7 @@ Tests are your friend! Keep them running, keep them updated.
 
 ```sh
 run_karma # To run karma with Chrome Headless
-run_karma_chrome # To run karma in host browser (open http://localhost:9876)
+run_karma_chrome # To run karma in the host browser (open http://localhost:9876)
 ```
 
 `run_karma` is the default way of running tests as it automatically
@@ -273,11 +273,11 @@ IP4.DNS[2]:              10.0.0.3
 ```
 
 NOTE: For older versions of `nmcli`, one should replace the first part of the
-command above with `nmcli device list` (tested with nmcli version 0.9.8.8).
+the command above with `nmcli device list` (tested with nmcli version 0.9.8.8).
 
 Using these addresses, create a file `/etc/docker/daemon.json`:
 ```
-$ sudo su root
+$ Sudo su root
 # cd /etc/docker
 # touch daemon.json
 ```
@@ -302,7 +302,7 @@ Solution 2:
 - Delete any images which have cached the invalid DNS settings.
 - Build again and the problem should be solved.
 
-### Unable to run Docker as non-root user
+### Unable to run Docker as a non-root user
 
 Please check the [Official documentation](https://docs.docker.com/engine/installation/linux/linux-postinstall/) on this.
 
@@ -313,7 +313,7 @@ resolve our symlinks in the project directory (which we use to store
 dependencies installed from inside the container) on the host machine.
 
 A workaround for this is to create the corresponding directories on the host
-machine as a placeholder so the symlinks aren't considered broken:
+a machine as a placeholder so the symlinks aren't considered broken:
 
 ```sh
 $ sudo mkdir -p /vagrant-dev/node_modules
@@ -340,7 +340,7 @@ environment variables (and defined in `/home/vagrant/.bashrc`).
 
 *PREFIX*:
 
-Points at root directory of the Git repository, and is automatically
+Points at the root directory of the Git repository, and is automatically
 detected if not present.
 
 *DEV_PREFIX*:
